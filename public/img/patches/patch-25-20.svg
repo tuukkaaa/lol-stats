@@ -1,0 +1,48 @@
+<!-- Placeholder SVG for patch 25.20 -->
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#020617;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg)"/>
+  
+  <!-- Decorative circles -->
+  <circle cx="100" cy="100" r="60" fill="#374151" opacity="0.3"/>
+  <circle cx="700" cy="350" r="80" fill="#374151" opacity="0.2"/>
+  <circle cx="600" cy="80" r="40" fill="#f59e0b" opacity="0.1"/>
+  
+  <!-- Main title -->
+  <text x="400" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="url(#accent)">
+    PATCH 25.20
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#e5e7eb">
+    World Championship Update
+  </text>
+  
+  <!-- Features -->
+  <text x="400" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#9ca3af">
+    Flora Fatalis Skins • Arena Balance • Competitive Adjustments
+  </text>
+  
+  <!-- Version badge -->
+  <rect x="320" y="320" width="160" height="40" rx="20" fill="url(#accent)"/>
+  <text x="400" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1f2937">
+    October 2025
+  </text>
+  
+  <!-- League of Legends branding -->
+  <text x="400" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">
+    LEAGUE OF LEGENDS
+  </text>
+</svg>

@@ -1,0 +1,32 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NEXT_RUNTIME = "nodejs18.x"
+  NODE_VERSION = "18"
+
+# Enable Next.js API routes
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/api/:splat"
+  status = 200
+  force = false
+
+# Function timeout settings
+[functions]
+  node_bundler = "esbuild"
+  included_files = ["lib/**", "components/**"]
+
+[functions."api/matches"]
+  timeout = 25  # 25 seconds for match API
+
+[[headers]]
+  for = "/api/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Headers = "Content-Type, Authorization"
+    Access-Control-Allow-Methods = "GET, POST, PUT, DELETE, OPTIONS"

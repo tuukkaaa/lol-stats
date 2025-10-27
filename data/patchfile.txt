@@ -1,0 +1,434 @@
+Patch 25.20 Notes
+Get ready for Worlds with patch 25.20!
+Game Updates
+Riot Riru, Riot Sakaar
+10/7/2025
+ Get ready for Worlds 2025 with patch 25.20!
+
+Coming to you this week we have brand new Flora Fatalis skins coming to the Rift (and Fiddlesticks in my nightmares), the final round of Doom Bots where all three trials will be live (good luck!), another round of Arena balance changes, improvements to our Streamer Mode feature, a test run of preventing players from banning ally's hovered champs, emote searching technology, all on top of your regularly scheduled balance changes. Be sure to read on for all the details!
+
+Looking for more information on all things League of Legends? Check out our community-run wiki here!
+
+Wrong patch notes? You can find the TFT patch notes here! 
+Lilu "Riot Riru" Cabreros
+Caden "Riot Sakaar" House
+Mid-Patch Updates
+10/9/2025 Azir Changes
+Azir
+W AP Ratio: 30/40/50/60/70% ⇒ 32.5/40/47.5/55/62.5%
+Patch Highlights
+
+Flora Fatalis Soraka, Flora Fatalis Fiddlesticks, Flora Fatalis Lissandra, and Trials of Twilight Xin Zhao will be available October 8, 2025.
+
+World's Patch
+ Welcome to the official patch of the 2025 League of Legends World Championship! As most of our pro-focused changes came in the last patch, we're taking great care to ensure this patch's changes jive with both pro players and the rest of us at home. As a result, we're delivering some buffs for champions who underperform when comparing experienced players to experienced players of other champions, some nerfs to long-term overperformers in lower skill brackets, and a set of adjustments aimed at buffing or nerfing pro power without affecting overall win rates for Normal and Ranked play. 
+To celebrate World's we're bringing a bit of it to the Rift with World's themed decor including the all new Summoner's Cup, drop by the top lane to check it out!
+Trials of Twilight Xin Zhao will be this year's Esports rev share skin! Riot will allocate a portion of the proceeds to the Global Revenue Pool, which directly supports leagues and teams in the LoL Esports ecosystem.
+60 brand new team emotes will be released in this patch at 350 RP each, make sure to find your favorite teams (or memes) and pick them up before they go away in patch 25.23.
+Let everyone on the Rift know who you're rooting for by picking up a 2025 team icon for 250 RP. Equipping them will add your teams' three letter acronym to the front of your in-game name so you can rep your favorite team.
+Streamer Mode Improvements
+ Griefing in high MMR games is a problem we see pretty consistently that ruins games for players, specifically for pros, streamers, or content creators.
+
+Sure it's cool to get into a game with your favorite streamer or pro, but what isn't cool are the players that run it down in these players' games to get a cheap laugh, camping these player's lanes, or just generally altering how you play because of a high profile player in your game. This absolutely isn't something we're okay with, so we've built an upgraded streamer mode in partnership with our creators and pros to protect against negative actions like these.
+
+In practice, our new and improved streamer mode will have three modes of anonymity that you can opt into. They are as follows: 
+Hide Other Names: This will hide players' game names on your screen only. Your identity will still be visible to other players in game.
+Hide My Name: This will hide your RiotID and Game Name to all other players in champ select, in game, and in third party apps, but your account progression (Mastery Score, Challenges, Title, Profile Pic, Ranked Border, etc.) will still be visible.
+Hide My Everything: This will hide your RiotID, Game Name, and all of your account progression to all other players in champ select, in game, and in third party apps. If you're looking to be anonymous then this is the mode you'll want to select.
+Banning Allied Hovers [NA & OCE ONLY]
+ In situations where your "teammate" bans your champion we see higher report rates, lower win rates, and a reported overall worse experience. In this patch we're experimenting with removing the ability to ban your ally's hovered champion to help alleviate these negative interactions. We'll be watching how this change goes and listening to your feedback before making a call on whether we revert this change or roll it out worldwide, so please let us know what you think! 
+In Normal Draft, Ranked, and Arena (or any other queue with a ban phase), you can no longer ban a champion an ally is hovering.
+Champions
+
+Anivia
+ Anivia's been struggling to find success in the mid lane as of late. Her low mobility is one of her weaknesses, so we're lowering her Q's cooldown slightly as a way for her to keep her enemies at bay while also giving her a bit more damage on her E to help her out. 
+Q - Flash Frost
+Cooldown: 12/11/10/9/8 ⇒ 11/10/9/8/7 seconds
+E - Frostbite
+Base Damage: 50 / 75 / 100 / 125 / 150 ⇒ 55 / 80 / 105 / 130 / 155
+
+Azir
+ Azir's a bit too powerful in higher levels of play at the moment, but he's in pretty good shape for regular play. So we're looking to shift his power around and reduce those pro-specific strengths. To do this, we're digging into his early laning phase and giving him less passive guaranteed wave control and compensating him with better late-game scaling and more rewards for taking big risks. 
+W - Arise!
+AP Ratio: + 40 / 45 / 50 / 55 / 60% AP ⇒ + 30 / 40 / 60 / 60 / 70% AP
+Recharge Rate: 10 / 9 / 8 / 7 / 6 ⇒ 12 / 10.5 / 9 / 7.5 / 6
+Damage to Additional Targets: 25/50/75/100% (levels 1/6/11/16) ⇒ 20% until level 8, then +8% per level (100% at 18)
+E - Shifting Sands
+Damage: 60 / 100 / 140 / 180 / 220 (+ 40% AP) ⇒ 70 / 110 / 150 / 190 / 230 (+ 60% AP)
+
+Briar
+ Despite her lack of self-control, Briar's been tearing it up as one of the highest performing junglers at lower ranks for a bit now. We're looking to tap down her power to bleed out enemies with her passive at max stacks, as effective kiting (and thus lower stack counts) are more common at higher ranks. 
+Passive - Crimson Curse
+Maximum Stacks: 7 ⇒ 5
+
+Camille
+ In her current state, Camille's laning phase is very hit or miss: Either she can comfortably beat her opponent with her passive, or she can't really engage with the lane and loses. While she appears powerful in the hands of most players we don't think this shape is healthy for her as a whole, so we're giving her W some additional power that will give her some more strength to play around early while balancing that with reduced base stats, which shouldn't feel particularly noticeable. 
+Base Stats
+Armor Growth: 5 ⇒ 4.5
+W - Tactical Sweep
+Cooldown: 17 / 15.5 / 14 / 12.5 / 11 ⇒ 15 / 14 / 13 / 12 / 11 seconds
+Base Damage: 50 / 75 / 100 / 125 / 150 ⇒ 60 / 85 / 110 / 135 / 160
+
+Fizz
+ Fizz is a little weak right now (some might say he's floundering) and is incredibly reliant on snowballing, as his base damages are appropriate in the early game but generally don't scale well without gold. We're looking to make some power-positive adjustments to make him less reliant on snowballing while still asking him to build primarily AP assassin items. As a whole, these changes should be positive for his up-front W burst damage, make his ultimate a bit weaker, and open up a few new item choices. 
+W - Seastone Trident
+Passive Damage over Time: 20 / 30 / 40 / 50 / 60 (+ 30% AP) ⇒ 30 / 45 / 60 / 75 / 90 (+ 25% AP)
+Tower Damage: Damage over time no longer affects structures
+We Did the Math: Damage over time now displays total damage to target
+Active Burst Damage: 50 / 70 / 90 / 110 / 130 ⇒ 50 / 75 / 100 / 125 / 150
+On-Hit Damage: 10 / 15 / 20 / 25 / 30 (+ 35% AP) ⇒ 20 / 25 / 30 / 35 / 40 (+30% AP)
+R - Chum the Waters
+Guppy Damage: 150 / 250 / 350 (+ 80% AP) ⇒ 180 / 300 / 420 (+ 60% AP)
+Chomper Damage: 225 / 325 / 425 (+ 100% AP) ⇒ 225 / 375 / 525 (+ 75% AP)
+Gigalodon Damage: 300 / 400 / 500 (+ 120% AP) ⇒ 270 / 450 / 630 (+ 90% AP)
+
+Graves
+ Graves is a fairly popular jungler that's performing decently right now, but his builds have devolved into one-shot lethality. We don't believe this to be a good state for him because his playstyle becomes one-shot or be one-shot which isn't fun for anyone. We think it'd be better for him to have a sustained combat pattern where skillful Graves players can utilize their Grit, so we're nudging his builds and playstyle around to make him less reliant on bonus AD. Overall this should net out in a small buff once this change has had some time to settle and players adapt. 
+Q - End of the Line
+Initial Damage: 45 / 65 / 85 / 105 / 125 (+ 80% bonus AD) ⇒ 50 / 75 / 100 / 125 /150 (+ 65% bonus AD)
+Secondary Damage: 85 / 120 / 155 / 190 / 225 (+ 40 / 65 / 90 / 115 / 140% bonus AD) ⇒ 80 / 125 / 170 / 215 / 260 (+ 55 / 70 / 85 / 100 / 115% bonus AD)
+Combined Damage: 130 / 185 / 240 / 295 / 350 (+ 120 / 145 / 170 / 195 / 220% bonus AD) ⇒ 130 / 200 / 270 / 340 / 410 (+ 120 / 135 / 150 / 165 / 180 % bonus AD)
+
+Katarina
+ Despite Katarina feeling oppressive in the mid-game, she's been having a hard time actually converting her snowballs into wins. This is true even in the hands of her most dedicated mains. So, we're going to play up some of her resilience in lane so that she can find more success battling her lane opponent. 
+Base Stats
+Armor: 28 ⇒ 32
+
+Malphite
+ Malphite's a solid top laner and a consistent rock for his teams, but even so he is often a bit heavy for his teams. We're giving him a little help this patch by increasing his base armor just a bit to solidify his early game. 
+Base Stats
+Base Armor: 37 ⇒ 40
+E - Ground Slam
+Base Damage: 70 / 110 / 150 / 190 / 230 ⇒ 80 / 120 / 160 / 200 / 240
+
+Orianna
+ At higher skill levels Orianna's early wave clear is far too safe and her optimized builds make her too tanky for her to be exposed to any real risks, so we're looking to re-introduce some risk to her overall kit. We want to incentivize Orianna to build more damage and less tank, so we're weakening her early wave clear power spikes so she has to pick up more AP to clear waves, something most players are already doing and thus shouldn't be impacted much by. 
+W - Command: Dissonance
+Damage: 70 / 120 / 170 / 220 / 270 (+ 70% AP) ⇒ 70 / 110 / 150 / 190 / 230 (+ 80% AP)
+
+Pantheon
+ Our nerfs last patch to Pantheon hit him a bit too hard, so we're walking them back a little bit. We still want there to be a strong clear speed tradeoff for a jungler with such reliable ganks, but it doesn't have to be quite so bad. 
+Q - Comet Spear
+Monster Damage Modifier: 0.75x ⇒ 0.8x
+W - Shield Vault
+Minion/Monster Damage Cap: 120 ⇒ 150
+
+Veigar
+ Veigar's been coming up a bit short of success as of late, so to help our resident miniature king we're upping his W's AP ratio so he can take more advantage of his infinite AP scaling to pop enemies he catches with a well placed Event Horizon. 
+W - Dark Matter
+AP Ratio: (+ 60 / 70 / 80 / 90 / 100% AP) ⇒ (+ 70 / 80 /90 / 100 / 110%)
+
+Volibear
+ Volibear's been one of the strongest junglers in solo queue for a while now, so in this patch we're looking to bring his (ability) power down a notch. His ability to synergize with cooldown reduction has allowed him to sustain through most situations while still dealing a respectable amount of DPS. We're okay with his sustain, but to bring his DPS down just a tad we're hitting his AP ratios which should weaken some of his most popular builds while leaving his AD builds untouched. 
+Passive - The Relentless Storm
+AP Ratio: 50% ⇒ 45%
+E - Sky Splitter
+AP Ratio: 80% ⇒ 70%
+
+Warwick
+ Warwick is particularly oppressive in lower skill brackets of play, so we're looking to make his claws and teeth just a little less lethal. As he's often able to simply build tank items later in the game, we're nudging him toward keeping up with damage purchases by reducing his guaranteed late game damage output. 
+Base Stats
+Attack Damage Growth: 2.75 ⇒ 2.5
+Attack Speed Growth: 2.3% ⇒ 2%
+
+Wukong
+ Wukong has been performing quite well at the highest levels of play despite not being particularly strong at lower skill levels. We're looking to bring his ceiling down and floor up a bit by moving some power away from his pro skewed abilities and distributing it throughout the rest of his kit. 
+Q - Crushing Blow
+Bonus Damage Bonus AD Ratio: 55% ⇒ 50% bonus AD
+W - Warrior Trickster
+Cooldown: 20 / 19 /18 / 17 /16 ⇒ 22 / 21 / 20 / 19 / 18 seconds
+Clone Damage: 35 / 40 / 45 / 50 / 55% ⇒ 30 / 35 / 40 / 45 / 50%
+E - Nimbus Strike
+Base Damage: 80 / 110 / 140 / 170 / 200 ⇒ 80 / 120 / 160 / 200 / 240
+Systems
+Lane Swap Detection
+ It's important that players have a fair fight in their early laning phases, both in pro play and everywhere else. Thankfully, our more recent lane swap mitigation tactics have removed 2v1 lanes at the start of game from pro play while generally not intruding on everyone else. In the interest of cultivating exciting and non-deterministic laning phases this Worlds, we're extending lane swap detection for another minute in top lane.
+
+As this mechanic only affects support champions venturing to the far side of the map, this won't affect your level 1 Aurelion Sol roams… unless you're playing ASol support. 
+Top Lane Detection: Until 3:00 ⇒ Until 4:00
+Doom Bots
+ Welcome to the final patch of this activation of Doom Bots! For those keeping track, all three Trials of Doom will be live in this patch. It also means this is your last chance to get a win in each and earn the title "Definitely Not a Bot". We've still got a couple Trials to master ourselves, so we'll see you there! 
+Doom Bots Champion Balance Adjustments
+ We also looked at how individual Champions have been performing against our terrifying Doom Bots, and are making a few balance tweaks to help out the most underperforming options for this final patch. 
+Champions
+Ahri
+Damage Dealt: 100% ⇒ 110%
+Damage Taken: 100% ⇒ 95%
+
+Akali
+Damage Dealt: 100% ⇒ 110%
+Damage Taken: 100% ⇒ 95%
+
+Bard
+Damage Dealt: 100% ⇒ 105%
+Damage Taken: 100% ⇒ 95%
+
+Blitzcrank
+Damage Taken: 100% ⇒ 90%
+
+Diana
+Damage Dealt: 100% ⇒ 105%
+Damage Taken: 100% ⇒ 95%
+Tenacity: 0 ⇒ 25
+
+Evelynn
+Damage Dealt: 100% ⇒ 105%
+Tenacity: 0 ⇒ 25
+
+Ezreal
+Damage Dealt: 100% ⇒ 110%
+
+Fizz
+Damage Dealt: 100% ⇒ 105%
+Damage Taken: 100% ⇒ 95%
+
+Hecarim
+Damage Dealt: 100% ⇒ 105%
+Damage Taken: 100% ⇒ 95%
+Tenacity: 0 ⇒ 25
+
+Ivern
+Shielding: 100% ⇒ 110%
+Damage Taken: 100% ⇒ 95%
+
+Jayce
+Damage Dealt: 100% ⇒ 105%
+Damage Taken: 100% ⇒ 97.5%
+Tenacity: 0 ⇒ 25
+
+Kalista
+Damage Dealt: 100% ⇒ 110%
+Damage Taken: 100% ⇒ 95%
+
+Kassadin
+Damage Dealt: 100% ⇒ 105%
+Damage Taken: 100% ⇒ 90%
+
+Katarina
+Damage Dealt: 100% ⇒ 110%
+Damage Taken: 100% ⇒ 95%
+
+Kennen
+Damage Dealt: 100% ⇒ 105%
+Damage Taken: 100% ⇒ 95%
+
+Kha'Zix
+Damage Dealt: 100% ⇒ 110%
+Tenacity: 0 ⇒ 25
+
+LeBlanc
+Damage Dealt: 100% ⇒ 115%
+
+Lee Sin
+Damage Dealt: 100% ⇒ 105%
+Damage Taken: 100% ⇒ 95%
+
+Lissandra
+Damage Dealt: 100% ⇒ 105%
+
+Lux
+Damage Dealt: 100% ⇒ 110%
+
+Malphite
+Damage Taken: 100% ⇒ 90%
+Tenacity: 0 ⇒ 25
+Damage Dealt: 100% ⇒ 110%
+Damage Taken: 100% ⇒ 95%
+
+Naafiri
+Damage Dealt: 100% ⇒ 110%
+Damage Taken: 100% ⇒ 95%
+
+Nasus
+Damage Taken: 100% ⇒ 90%
+Tenacity: 0 ⇒ 25
+
+Nautilus
+Damage Taken: 100% ⇒ 90%
+Tenacity: 0 ⇒ 25
+
+Nidalee
+Damage Dealt: 100% ⇒ 110%
+Damage Taken: 100% ⇒ 95%
+Tenacity: 0 ⇒ 25
+
+Nocturne
+Damage Dealt: 100% ⇒ 105%
+Damage Taken: 100% ⇒ 95%
+Tenacity: 0 ⇒ 25
+
+Nunu & Willump
+Damage Dealt: 100% ⇒ 105%
+Damage Taken: 100% ⇒ 95%
+Tenacity: 0 ⇒ 25
+
+Pyke
+Damage Taken: 100% ⇒ 85%
+
+Quinn
+Damage Dealt: 100% ⇒ 110%
+
+Rengar
+Damage Dealt: 100% ⇒ 110%
+Damage Taken: 100% ⇒ 95%
+
+Shaco
+Damage Dealt: 100% ⇒ 115%
+
+Talon
+Damage Dealt: 100% ⇒ 110%
+Tenacity: 0 ⇒ 25
+
+Thresh
+Damage Taken: 100% ⇒ 90%
+
+Tristana
+Damage Dealt: 100% ⇒ 105%
+
+Tryndamere
+Damage Dealt: 100% ⇒ 105%
+Tenacity: 0 ⇒ 25
+
+Vex
+Damage Dealt: 100% ⇒ 105%
+
+Xerath
+Damage Dealt: 100% ⇒ 105%
+
+Zed
+Damage Dealt: 100% ⇒ 115%
+
+Zoe
+Damage Dealt: 100% ⇒ 115%
+Arena
+ What's up Arena gamers? In this patch, we are continuing to address outlier champions while paying specific attention to stat checkers that were simply too strong. Additionally, we are showing love to some of our poke champions that have been struggling to perform and made some changes to make our items more consistent with Summoner's Rift. We have nerfed some stronger augments such as Mad Hatter and Gamba Anvil as well. To the Arena! 
+Champions
+Nidalee
+Q Max Range Damage Amp: 325% ⇒ 400%
+E Swipe AP Ratio: 55% ⇒ 75%
+
+Ezreal
+Passive Attack Speed per Stack: 15% ⇒ 20%
+Passive Duration: 6s ⇒ 8s
+Q AD Ratio: 150% ⇒ 160%
+R Cooldown: 120-90 ⇒ 50-30 seconds
+
+Taliyah
+Q Base Damage: 60-132 ⇒ 70-150
+Q AP Ratio: 55% ⇒ 60%
+E Cooldown: 14 ⇒ 12 seconds
+
+Hwei
+W Cooldown: 18-16 ⇒ 12-10 seconds
+E Cooldown: 13-11 ⇒ 12-10 seconds
+
+Jayce
+Q Base Damage: 40-240 ⇒ 80⇒310
+W AD Ratio: 65-105% ⇒ 70-110%
+
+Ambessa
+Q1 Percent Health Damage: 2-6% ⇒ 2-5%
+Q2 Percent Health Damage: 2-6% ⇒ 2-5%
+W Cooldown: 18-14 ⇒ 20-16 seconds
+
+Aurelion Sol
+Q Stardust Gain: 2 ⇒ 4
+Q AP Ratio: 55% ⇒ 60%
+
+Tryndamere
+W Slow Amount: 50-80% ⇒ 30-60%
+W AD Reduction: 30-90 ⇒ 20-80
+
+Yasuo
+Passive Shield is no longer 30% stronger in Arena
+E Base Damage: 75-135 ⇒ 70-130
+
+Udyr
+Q Bonus AD Ratio: 2% ⇒ 1.5% per 100 bonus AD
+Q2 Awaken bonus AD Ratio: 4% ⇒ 3% per 100 bonus AD
+Q2 Lightning Base Damage: 1.5%-3% ⇒ 1%-2%
+Q2 Lightning AP ratio increased from 4.8 per 100 ⇒ 5.4 per 100 total
+W HP On Hit: 1.2% ⇒ 1.5%
+W2 Healing Over 4 Seconds: 50% ⇒ 75%
+E Movement Speed: 25%-55% ⇒ 40% - 70%
+
+Pantheon
+Q Cooldown: 10-7 ⇒ 11-8 seconds
+
+Sylas
+W Damage AP Ratio: 65% ⇒ 60%
+
+Kayle
+Q Slow: 15-35% ⇒ 26-50%
+W Movement Speed: 15-35% ⇒ 24-40%
+
+Shaco
+Passive Bonus AD Ratio: 35% ⇒ 40%
+W Multitarget AP Ratio: 80% ⇒ 10% AP
+
+Bard
+W Charge Time: 8 ⇒ 5 seconds
+W Recharge Time: 18 ⇒ 10 seconds
+E Portal Movement Speed Bonus: 33% ⇒ 50%
+Augments
+Slow and Steady
+Minimum Attack Speed removed
+You will no longer gain Attack Speed if you are below 1.0
+
+Quest: Mad Hatter
+Adaptive Force per Hat: 12 ⇒ 10
+Tenacity: 1% ⇒ 0.5%
+Movement Speed: 4 ⇒ 2
+Quest must be completed at the end of a Combat Round
+
+Juice Press
+Cappa Juice Hats: 2 ⇒ 1
+
+Gamba Anvil
+Stat Shard Discount: 250 ⇒ 100 gold
+Items
+Seraph's Embrace
+Fixed tooltip to correctly show maximum Mana
+
+Blade of the Ruined King
+Hits Required to Proc: 1 ⇒ 3
+
+Zeke's Convergence
+Duration: 5 ⇒ 12 seconds
+Emote Searching Upgrades
+ Starting in this patch you'll now be able to search for emotes in your emote library by champion name. So instead of searching "WAHAHA" or "AWW YISS" you'll be able to find them by just typing "Jinx" instead! 
+Icon Rarity Updates
+ In this patch we're going through and updating some icon rarities. This is part of an ongoing effort to update icons to match the rarity level of their associated skins, so expect more to come soon! The following Icon's rarity levels have been updated: 
+Risen Legend Ahri (Transcendent)
+Immortalized Legend Ahri (Transcendent)
+Risen Legend Kai'Sa (Transcendent)
+Immortalized Legend Kai'Sa (Transcendent)
+Arcane Fractured Jinx (Exalted)
+Radiant Serpent Sett (Exalted)
+Sahn-Uzal Mordekaiser (Exalted)
+Spirit Blossom Morgana (Exalted)
+Custom Game Improvements
+Players can now select which map they'd like to use in ARAM Custom Games! You can also select "Random" if you'd like fate to decide for you.
+Fixed a bug that would sometimes show the "Add bot" button in ARAM Custom Games setup, even though bots cannot be added to Custom Games.
+Fixed a bug that allowed players on different game versions to join the same Custom Game lobby.
+Fixed a bug in which available lobby slots for a Custom Game, as shown in the friends list, would include spectator slots.
+Fixed a bug that would sometimes cause a player to be sent back to a Spectator slot in a Custom Game lobby when another player moved to a Spectator slot.
+Spectator Mode Improvements
+Minimap can be clicked and dragged from its edges to move it around the screen.
+Minimap has new transparency options.
+Minimap Frame/border can be toggled off.
+Minimap scaling has been expanded (can get much larger/smaller than what you can normally can see).
+Bugfixes & QoL Changes
+Quality of Life Changes
+New SFX have been added to the Thumbs Up emote!
+Bugfixes
+Fixed a bug that caused Seraphine’s W2 heal prediction to still calculate based off nearby allied champions.
+Fixed a bug that caused Jinx's W AoE VFX to not play correctly when killing an enemy.
+Fixed a bug that caused Sylas to copy Sion's passive with his R if casting his ultimate during his zombie state.
+Fixed a bug that caused Tahm Kench to gain Cloud Soul's effect when casting his R on a target out of range and cancelling it.
+Fixed a bug that caused Xin Zhao's R VFX to be brighter than intended in Spectator Mode.
+Fixed a bug that caused Zoe's yoyo SFX to not play at the end of her taunt and spawn in animations.
+Fixed a bug that caused Leona's E to drop tower aggro by landing an E against a target near a wall.
+Fixed a bug where Salvation (P) VFX were flickering on all of Soraka’s Skins.
+Fixed a bug where there were two staffs visible on the ground upon Celestine Soraka’s death
+Fixed a bug where Celestine Soraka was sliding from underground when respawning.
