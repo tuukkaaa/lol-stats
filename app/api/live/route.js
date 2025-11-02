@@ -30,8 +30,34 @@ export async function GET(request) {
         }
         const rankedStats = await riotApi.getRankedStats(playerPuuid, region);
         const soloQueue = rankedStats.find(entry => entry.queueType === 'RANKED_SOLO_5x5');
+        
+        let accountData = null;
+        try {
+          accountData = await riotApi.getAccountByPuuid(playerPuuid, region);
+        } catch (error) {
+          console.warn('Could not fetch account data for participant');
+        }
+        
+        let championMastery = null;
+        try {
+          const masteryData = await riotApi.getChampionMastery(playerPuuid, participant.championId, region);
+          if (masteryData) {
+            championMastery = {
+              championPoints: masteryData.championPoints || 0,
+              championLevel: masteryData.championLevel || 0
+            };
+          }
+        } catch (error) {
+          console.warn('Could not fetch champion mastery for participant');
+        }
+        
         return {
           ...participant,
+          riotId: accountData ? `${accountData.gameName}#${accountData.tagLine}` : null,
+          teamPosition: participant.teamPosition || null,
+          individualPosition: participant.individualPosition || null,
+          championPoints: championMastery?.championPoints || 0,
+          championLevel: championMastery?.championLevel || 0,
           rankedStats: soloQueue ? {
             tier: soloQueue.tier,
             rank: soloQueue.rank,

@@ -7,8 +7,9 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { getRankTier } from '@/lib/riot';
-import { Users, Clock, Zap, Trophy, Target, Sword, ExternalLink } from 'lucide-react';
+import { Users, Clock, Zap, Trophy, Target, Sword, ExternalLink, Eye, EyeOff, Shield } from 'lucide-react';
 import DataStatus from './DataStatus';
+
 const TeamCard = ({
   team,
   championData,
@@ -30,13 +31,34 @@ const TeamCard = ({
         return fallback;
     }
   };
+
+  const getRuneTreeImage = styleId => {
+    const runeTreeMap = {
+      8100: 'Domination',
+      8000: 'Precision',
+      8300: 'Inspiration',
+      8400: 'Resolve',
+      8200: 'Sorcery'
+    };
+    const treeName = runeTreeMap[styleId];
+    return treeName
+      ? `https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/RunesReforged/${treeName}/${treeName}.png`
+      : null;
+  };
+
+  const getPrimaryRuneImage = (perkId) => {
+    return `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/perk-images/styles/runestree/${perkId}.png`;
+  };
+
   const teamStats = {
     avgLevel: Math.round(team.reduce((sum, p) => sum + (p.level || 1), 0) / team.length),
     totalMastery: team.reduce((sum, p) => sum + (p.championPoints || 0), 0),
-    rankedPlayers: team.filter(p => p.rankedStats).length
+    rankedPlayers: team.filter(p => p.rankedStats).length,
+    streamerMode: team.filter(p => !p.puuid || (!p.riotId && !p.summonerName)).length
   };
+
   const handlePlayerClick = player => {
-    if (player.riotId || player.summonerName) {
+    if (!player.isStreamerMode && (player.riotId || player.summonerName)) {
       const name = player.riotId || player.summonerName;
       let gameName, tagLine;
       if (name.includes('#')) {
@@ -48,132 +70,199 @@ const TeamCard = ({
       router.push(`/summoner/${region}/${encodeURIComponent(gameName)}-${encodeURIComponent(tagLine)}`);
     }
   };
-  return <Card className={`${teamColor === 'blue' ? 'border-l-4 border-l-blue-400/50 bg-gradient-to-r from-blue-900/20 to-stone-800/90' : 'border-l-4 border-l-red-400/50 bg-gradient-to-r from-red-900/20 to-stone-800/90'} border-stone-700 shadow-lg backdrop-blur-sm h-fit`}>
+
+  return (
+    <Card className={`${teamColor === 'blue' ? 'border-l-4 border-l-blue-400/50 bg-gradient-to-r from-blue-900/20 to-stone-800/90' : 'border-l-4 border-l-red-400/50 bg-gradient-to-r from-red-900/20 to-stone-800/90'} border-stone-700 shadow-lg backdrop-blur-sm h-fit`}>
       <CardHeader className="pb-3">
         <div className="flex items-center justify-between">
           <CardTitle className={`text-base flex items-center gap-2 ${teamColor === 'blue' ? 'text-blue-400' : 'text-red-400'}`}>
-            {teamColor === 'blue' ? <Target className="h-4 w-4" /> : <Sword className="h-4 w-4" />}
+            {teamColor === 'blue' ? <Shield className="h-4 w-4" /> : <Sword className="h-4 w-4" />}
             {title}
           </CardTitle>
-          <div className="flex items-center gap-3 text-xs">
+          <div className="flex items-center gap-2 text-xs flex-wrap justify-end">
             <div className="bg-stone-700/30 rounded px-2 py-1">
-              <span className="text-amber-400 font-medium">Avg Lv. {teamStats.avgLevel}</span>
+              <span className="text-amber-400 font-medium">Lv. {teamStats.avgLevel}</span>
             </div>
             <div className="bg-stone-700/30 rounded px-2 py-1">
-              <span className="text-emerald-400 font-medium">{teamStats.rankedPlayers}/5 Ranked</span>
+              <span className="text-emerald-400 font-medium">{teamStats.rankedPlayers}/5</span>
             </div>
-            <div className="bg-stone-700/30 rounded px-2 py-1">
-              <span className="text-purple-400 font-medium">{Math.round(teamStats.totalMastery / 1000)}k Mastery</span>
-            </div>
+            {teamStats.streamerMode > 0 && (
+              <div className="bg-purple-500/20 border border-purple-500/30 rounded px-2 py-1 flex items-center gap-1">
+                <EyeOff className="h-3 w-3 text-purple-400" />
+                <span className="text-purple-400 font-medium">{teamStats.streamerMode}</span>
+              </div>
+            )}
           </div>
         </div>
       </CardHeader>
       
       <CardContent className="pt-0 pb-3">
-        <div className="space-y-2">
+        <div className="space-y-1.5">
           {team.map((player, index) => {
-          const champion = championData ? Object.values(championData).find(champ => champ.key === player.championId.toString()) : null;
-          const spell1 = summonerSpellData ? Object.values(summonerSpellData).find(spell => spell.key === player.spell1Id.toString()) : null;
-          const spell2 = summonerSpellData ? Object.values(summonerSpellData).find(spell => spell.key === player.spell2Id.toString()) : null;
-          const primaryRune = player.perks?.perkIds?.[0];
-          const secondaryTree = player.perks?.perkSubStyle;
-          const getRuneTreeImage = styleId => {
-            const runeTreeMap = {
-              8100: 'Domination',
-              8000: 'Precision',
-              8300: 'Inspiration',
-              8400: 'Resolve',
-              8200: 'Sorcery'
-            };
-            const treeName = runeTreeMap[styleId];
-            return treeName ? `https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/RunesReforged/${treeName}/${treeName}.png` : null;
-          };
-          return <div key={player.puuid || index} onClick={() => handlePlayerClick(player)} className="flex items-center gap-2 p-2 bg-stone-700/20 rounded-lg border border-stone-600/30 hover:bg-stone-600/30 hover:border-stone-500/50 transition-all duration-200 cursor-pointer group min-h-[60px]">
-                {}
+            const champion = championData
+              ? Object.values(championData).find(champ => champ.key === player.championId.toString())
+              : null;
+            const spell1 = summonerSpellData
+              ? Object.values(summonerSpellData).find(spell => spell.key === player.spell1Id.toString())
+              : null;
+            const spell2 = summonerSpellData
+              ? Object.values(summonerSpellData).find(spell => spell.key === player.spell2Id.toString())
+              : null;
+
+            const isStreamerMode = !player.puuid || (!player.riotId && !player.summonerName);
+            
+            const primaryRuneId = player.perks?.perkIds?.[0];
+            const primaryRuneImage = primaryRuneId ? getPrimaryRuneImage(primaryRuneId) : null;
+
+            return (
+              <div
+                key={player.puuid || index}
+                onClick={() => !isStreamerMode && handlePlayerClick(player)}
+                className={`flex items-center gap-2 p-2 bg-stone-700/20 rounded-lg border border-stone-600/30 ${!isStreamerMode ? 'hover:bg-stone-600/30 hover:border-stone-500/50 cursor-pointer' : 'opacity-75'} transition-all duration-200 group min-h-[64px]`}
+              >
                 <div className="relative flex-shrink-0">
-                  <Avatar className="h-10 w-10 border-2 border-stone-600">
-                    <AvatarImage src={champion ? getImageUrl('champion', champion.image.full) : ''} alt={champion?.name || 'Champion'} />
-                    <AvatarFallback className="bg-stone-600 text-stone-200 text-xs font-bold">{champion?.name?.[0] || 'C'}</AvatarFallback>
+                  <Avatar className="h-11 w-11 border-2 border-stone-600">
+                    <AvatarImage
+                      src={champion ? getImageUrl('champion', champion.image.full) : ''}
+                      alt={champion?.name || 'Champion'}
+                    />
+                    <AvatarFallback className="bg-stone-600 text-stone-200 text-xs font-bold">
+                      {champion?.name?.[0] || 'C'}
+                    </AvatarFallback>
                   </Avatar>
-                  <div className="absolute -bottom-1 -right-1 bg-amber-500 text-black text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center">
-                    {player.level || 1}
-                  </div>
                 </div>
 
-                {}
                 <div className="flex flex-col gap-0.5 flex-shrink-0">
-                  {spell1 && <img src={getImageUrl('spell', spell1.image.full)} alt={spell1.name} className="w-5 h-5 rounded border border-stone-600/50" title={spell1.name} />}
-                  {spell2 && <img src={getImageUrl('spell', spell2.image.full)} alt={spell2.name} className="w-5 h-5 rounded border border-stone-600/50" title={spell2.name} />}
+                  {spell1 && (
+                    <img
+                      src={getImageUrl('spell', spell1.image.full)}
+                      alt={spell1.name}
+                      className="w-5 h-5 rounded border border-stone-600/50"
+                      title={spell1.name}
+                    />
+                  )}
+                  {spell2 && (
+                    <img
+                      src={getImageUrl('spell', spell2.image.full)}
+                      alt={spell2.name}
+                      className="w-5 h-5 rounded border border-stone-600/50"
+                      title={spell2.name}
+                    />
+                  )}
                 </div>
 
-                {}
                 <div className="flex flex-col gap-0.5 flex-shrink-0">
-                  {player.perks?.perkStyle && <img src={getRuneTreeImage(player.perks.perkStyle)} alt="Primary Rune Tree" className="w-5 h-5 rounded border border-stone-600/50" title="Primary Rune Tree" onError={e => {
-                e.target.style.display = 'none';
-              }} />}
-                  {player.perks?.perkSubStyle && <img src={getRuneTreeImage(player.perks.perkSubStyle)} alt="Secondary Rune Tree" className="w-5 h-5 rounded border border-stone-600/50 opacity-70" title="Secondary Rune Tree" onError={e => {
-                e.target.style.display = 'none';
-              }} />}
+                  {primaryRuneImage && (
+                    <img
+                      src={primaryRuneImage}
+                      alt="Primary Rune"
+                      className="w-5 h-5 rounded-full border border-stone-600/50 bg-stone-900"
+                      title="Primary Rune"
+                      onError={e => {
+                        e.target.style.display = 'none';
+                      }}
+                    />
+                  )}
+                  {player.perks?.perkSubStyle && (
+                    <img
+                      src={getRuneTreeImage(player.perks.perkSubStyle)}
+                      alt="Secondary Rune Tree"
+                      className="w-5 h-5 rounded border border-stone-600/50 opacity-70"
+                      title="Secondary Rune Tree"
+                      onError={e => {
+                        e.target.style.display = 'none';
+                      }}
+                    />
+                  )}
                 </div>
 
-                {}
                 <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-1">
-                    <h4 className="font-medium text-stone-100 group-hover:text-amber-400 transition-colors truncate text-sm">
-                      {player.riotId || player.summonerName || 'Unknown'}
-                    </h4>
-                    <ExternalLink className="h-3 w-3 text-stone-400 group-hover:text-amber-400 transition-colors flex-shrink-0" />
-                  </div>
-                  <div className="text-xs text-stone-400 truncate">
-                    {champion?.name || 'Unknown Champion'}
-                  </div>
-                </div>
-
-                {}
-                <div className="flex items-center gap-1 flex-shrink-0 min-w-[60px]">
-                  {player.rankedStats ? <>
-                      <img src={`/img/${player.rankedStats.tier.charAt(0).toUpperCase() + player.rankedStats.tier.slice(1).toLowerCase()}.png`} alt={`${player.rankedStats.tier} ${player.rankedStats.rank}`} className="w-5 h-5" onError={e => {
-                  e.target.style.display = 'none';
-                }} />
-                      <div className="text-right">
-                        <div className="font-bold text-xs text-amber-400 leading-tight">
-                          {player.rankedStats.tier.charAt(0).toUpperCase()}{player.rankedStats.rank}
-                        </div>
-                        <div className="text-xs text-stone-300 leading-tight">
-                          {player.rankedStats.leaguePoints}LP
-                        </div>
+                  {isStreamerMode ? (
+                    <div className="flex items-center gap-2">
+                      <EyeOff className="h-4 w-4 text-purple-400 flex-shrink-0" />
+                      <div>
+                        <h4 className="font-medium text-purple-300 text-sm">Streamer Mode</h4>
+                        <div className="text-xs text-stone-400 truncate">{champion?.name || 'Unknown Champion'}</div>
                       </div>
-                    </> : <div className="text-xs text-stone-400 font-medium">Unranked</div>}
-                </div>
-
-                {}
-                <div className="text-right flex-shrink-0 min-w-[40px]">
-                  {player.rankedStats ? <>
-                      <div className={`font-bold text-xs ${player.rankedStats.winRate >= 60 ? 'text-emerald-400' : player.rankedStats.winRate >= 50 ? 'text-amber-400' : 'text-red-400'}`}>
-                        {player.rankedStats.winRate}%
-                      </div>
-                      <div className="text-xs text-stone-400">
-                        {player.rankedStats.wins}W {player.rankedStats.losses}L
-                      </div>
-                    </> : <div className="font-bold text-xs text-amber-400">
-                      {player.championPoints ? `${Math.round(player.championPoints / 1000)}k` : '0'}
-                    </div>}
-                </div>
-
-                {}
-                {player.rankedStats && <div className="text-right flex-shrink-0 min-w-[30px]">
-                    <div className="font-bold text-xs text-amber-400">
-                      {player.championPoints ? `${Math.round(player.championPoints / 1000)}k` : '0'}
                     </div>
-                    <div className="text-xs text-stone-400">
-                      {player.championLevel ? `M${player.championLevel}` : 'M0'}
+                  ) : (
+                    <>
+                      <div className="flex items-center gap-1">
+                        <h4 className="font-medium text-stone-100 group-hover:text-amber-400 transition-colors truncate text-sm">
+                          {player.riotId || player.summonerName || 'Unknown'}
+                        </h4>
+                        <ExternalLink className="h-3 w-3 text-stone-400 group-hover:text-amber-400 transition-colors flex-shrink-0" />
+                      </div>
+                      <div className="text-xs text-stone-400 truncate">{champion?.name || 'Unknown Champion'}</div>
+                    </>
+                  )}
+                </div>
+
+                {!isStreamerMode && (
+                  <>
+                    <div className="flex items-center gap-1 flex-shrink-0 min-w-[70px]">
+                      {player.rankedStats ? (
+                        <>
+                          <img
+                            src={`/img/${player.rankedStats.tier.charAt(0).toUpperCase() + player.rankedStats.tier.slice(1).toLowerCase()}.png`}
+                            alt={`${player.rankedStats.tier} ${player.rankedStats.rank}`}
+                            className="w-6 h-6"
+                            onError={e => {
+                              e.target.style.display = 'none';
+                            }}
+                          />
+                          <div className="text-left">
+                            <div className="font-bold text-xs text-amber-400 leading-tight">
+                              {player.rankedStats.tier.charAt(0).toUpperCase()} {player.rankedStats.rank}
+                            </div>
+                            <div className="text-xs text-stone-300 leading-tight">
+                              {player.rankedStats.leaguePoints}LP
+                            </div>
+                          </div>
+                        </>
+                      ) : (
+                        <div className="text-xs text-stone-400 font-medium">Unranked</div>
+                      )}
                     </div>
-                  </div>}
-              </div>;
-        })}
+
+                    <div className="text-right flex-shrink-0 min-w-[50px]">
+                      {player.rankedStats ? (
+                        <>
+                          <div
+                            className={`font-bold text-xs ${player.rankedStats.winRate >= 60 ? 'text-emerald-400' : player.rankedStats.winRate >= 50 ? 'text-amber-400' : 'text-red-400'}`}
+                          >
+                            {player.rankedStats.winRate}%
+                          </div>
+                          <div className="text-xs text-stone-400">
+                            {player.rankedStats.wins}W {player.rankedStats.losses}L
+                          </div>
+                        </>
+                      ) : (
+                        <div className="font-bold text-xs text-amber-400">
+                          {player.championPoints ? `${Math.round(player.championPoints / 1000)}k` : '0'}
+                        </div>
+                      )}
+                    </div>
+
+                    {player.rankedStats && (
+                      <div className="text-right flex-shrink-0 min-w-[40px]">
+                        <div className="font-bold text-xs text-purple-400">
+                          {player.championPoints ? `${Math.round(player.championPoints / 1000)}k` : '0'}
+                        </div>
+                        <div className="text-xs text-stone-400">
+                          {player.championLevel ? `M${player.championLevel}` : 'M0'}
+                        </div>
+                      </div>
+                    )}
+                  </>
+                )}
+              </div>
+            );
+          })}
         </div>
       </CardContent>
-    </Card>;
+    </Card>
+  );
 };
 export default function LiveGame({
   liveGameData,
