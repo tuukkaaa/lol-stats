@@ -41,3 +41,11 @@ Nextjs app taht integrates with the Riot Games API
 - **TH2**: Thailand
 - **TW2**: Taiwan
 - **VN2**: Vietnam
+
+
+
+
+## Screenshots
+
+![User/summoner Page](/public/sc1.png)
+![Match History Details](/public/sc3.png)
